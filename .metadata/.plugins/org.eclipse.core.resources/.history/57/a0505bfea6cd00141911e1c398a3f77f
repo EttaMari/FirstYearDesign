@@ -1,0 +1,30 @@
+// collects all turbidity data
+public class TurbinitySensor {
+	
+	public double testTurbidity() {
+		
+		double sum = 0;
+		
+	    int readingCount = 5;
+		    
+		    
+		    //Read the analog pin values ten times, adding to sum each time
+	   for (int i = 0; i < readingCount; i++) 
+	   {
+		  double reading = Start.r.getAnalogPin(pinNumb).getValue();
+		   //Refresh the analog pins so we get new readings
+		   
+		   sum += reading;
+		  
+	   }
+	   
+	   double current = sum / readingCount;   
+	   return current;	    
+	}
+		
+	public double getTurbidity(double current){
+			
+			
+			return turbidity; 
+		}
+}

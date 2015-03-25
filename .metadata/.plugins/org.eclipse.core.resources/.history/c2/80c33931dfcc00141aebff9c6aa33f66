@@ -1,0 +1,16 @@
+//controls all motor actions 
+import rxtxrobot.*;
+public class Motors {
+	
+	public void tickMotor(int speed1, int tickAmountM1, int speed2, int tickAmountM2)
+	{	
+		
+		Start.r.runEncodedMotor(RXTXRobot.MOTOR1, speed1, tickAmountM1, RXTXRobot.MOTOR2, speed2, tickAmountM2); 
+		
+	}
+	
+	public void infiniteMotor()
+	{
+		Start.r.runMotor(RXTXRobot.MOTOR1, 100, RXTXRobot.MOTOR2, -100, 0);
+	}
+}
